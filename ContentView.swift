@@ -10,5 +10,6 @@ struct ContentView: View {
             
         }
         .background(.blue)
+        .opacity(0.2)
     }
 }
