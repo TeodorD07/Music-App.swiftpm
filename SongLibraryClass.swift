@@ -1,7 +1,7 @@
 import SwiftUI
 
-class Library {
-    var artist = ""
-    var album = ""
-    var song = ""
+struct Library {
+    var artist : String
+    var album : String
+    var song : String 
 }
