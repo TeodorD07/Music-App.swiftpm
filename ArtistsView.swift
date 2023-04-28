@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AristsView: View {
+struct ArtistsView: View {
 
     @State var artists = ["Lana Del Rey", "Kali Uchis"]
     
@@ -9,10 +9,14 @@ struct AristsView: View {
             NavigationLink(artists[0]) {
                 LanaAlbumView()
                 }
+//            .buttonStyle(.borderedProminent)
+//            .tint(CustomColor.mauve)
             .onTapGesture {
                 print("Hello")
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(CustomColor.pale)
     }
 }
 
@@ -26,7 +30,11 @@ struct LanaAlbumView: View {
             NavigationLink(lanaAlbums[0]) {
                 BornToDie()
             }
+//            .buttonStyle(.borderedProminent)
+//            .tint(CustomColor.mauve)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(CustomColor.pale)
     }
 }
 
@@ -38,7 +46,11 @@ struct BornToDie: View {
                 Button(bornToDie[songs]) {
                     
                 }
+//                .buttonStyle(.borderedProminent)
+//                .tint(CustomColor.mauve)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(CustomColor.pale)
     }
 }
