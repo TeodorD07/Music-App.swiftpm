@@ -9,7 +9,7 @@ struct ContentView: View {
                 .font(.largeTitle)
             
             .padding(10)
-            
+           
             Button(action: {
                 
             }, label: {
@@ -18,7 +18,7 @@ struct ContentView: View {
                     
             })
             .buttonStyle(.borderedProminent)
-            .tint(.black)
+            .tint(CustomColor.mauve)
 
             .padding(10)
             
@@ -29,7 +29,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
             })
             .buttonStyle(.borderedProminent)
-            .tint(.black)
+            .tint(CustomColor.mauve)
 
             .padding(10)
             
@@ -40,7 +40,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
             })
             .buttonStyle(.borderedProminent)
-            .tint(.black)
+            .tint(CustomColor.mauve)
 
             .padding(10)
             
@@ -51,7 +51,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
             })
             .buttonStyle(.borderedProminent)
-            .tint(.black)
+            .tint(CustomColor.mauve)
            
             
         }
@@ -65,4 +65,6 @@ struct ContentView: View {
 
 struct CustomColor {
     static let pale = Color("pale")
+    
+    static let mauve = Color("mauve")
 }
