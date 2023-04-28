@@ -23,7 +23,7 @@ struct ContentView: View {
             .padding(10)
             
             Button(action: {
-                
+               
             }, label: {
                 Text("Albums")
                     .foregroundColor(.white)
