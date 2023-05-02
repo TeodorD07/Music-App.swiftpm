@@ -55,10 +55,39 @@ struct HomePage: View  {
                 .tint(CustomColor.mauve)
                 
                 .padding(10)
-                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(CustomColor.pale)
+            
+            
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    NavigationLink(destination: ArtistsView()) {
+                        Image(systemName: "star")
+                            .font(.title)
+                            .foregroundColor(CustomColor.mauve)
+                    }
+                    
+                    NavigationLink(destination: SongsView()) {
+                        Image(systemName: "music.note")
+                            .font(.title)
+                            .foregroundColor(CustomColor.mauve)
+                    }
+                    
+                }
+                
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                        Image(systemName: "house.fill")
+                            .font(.title)
+                            .foregroundColor(CustomColor.mauve)
+                }
+                
+                
+                
+            }
+            
         }
     }
 }
+
+
