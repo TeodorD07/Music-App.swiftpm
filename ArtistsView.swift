@@ -39,7 +39,7 @@ struct LanaAlbumView: View {
 }
 
 struct BornToDie: View {
-    @State var bornToDie = ["Ride", "Summertime Sadness"]
+    @State var bornToDie = ["Born to Die", "Off to the Races", "Blue Jeans", "Video Games", "Diet Mountain Dew", "National Anthem", "Dark Paradise", "Radio", "Carmen", "Million Dollar Man", "Summertime Sadness", "This Is What Makes Us Girls", "Without you", "Lolita", "Lucky Ones", "Ride", "American", "Cola", "Body Electric", "Blue Velvet", "Gods & Monsters", "Yayo", "Bel Air"]
     var body: some View {
         VStack {
             ForEach(0..<bornToDie.count, id: \.self) { songs in
