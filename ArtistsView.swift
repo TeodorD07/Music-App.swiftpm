@@ -54,3 +54,20 @@ struct BornToDie: View {
         .background(CustomColor.pale)
     }
 }
+
+struct LustForLife: View {
+    @State var lustForLife = ["Love", "Lust For Life (with The Weeknd)", "13 Beaches", "Cherry", "White Mustang", "Summer Bummer (feat. A$AP Rocky & Playboi Carti)", "Groupie Love (feat. A$AP Rocky)", "In My Feelings"]
+    var body: some View {
+        VStack {
+            ForEach(0..<lustForLife.count, id: \.self) { songs in
+                Button(lustForLife[songs]) {
+                    
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(CustomColor.mauve)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(CustomColor.pale)
+    }
+}
