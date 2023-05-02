@@ -14,6 +14,7 @@ struct ArtistsView: View {
             .onTapGesture {
                 print("Hello")
             }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.pale)
@@ -32,6 +33,9 @@ struct LanaAlbumView: View {
             }
 //            .buttonStyle(.borderedProminent)
 //            .tint(CustomColor.mauve)
+            NavigationLink(lanaAlbums[1]) {
+                           LustForLife()
+                       }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.pale)
