@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SongsView:  View {
+    
     var body: some View {
         VStack{
-            Text("Songs")
+            Text("songs here")
         }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(CustomColor.pale)
-        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(CustomColor.pale)
     }
+}
 

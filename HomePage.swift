@@ -73,14 +73,13 @@ struct HomePage: View  {
                             .font(.title)
                             .foregroundColor(CustomColor.mauve)
                     }
-                    
                 }
                 
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Image(systemName: "house.fill")
-                            .font(.title)
-                            .foregroundColor(CustomColor.mauve)
-                }
+//                ToolbarItemGroup(placement: .navigationBarLeading) {
+//                    Image(systemName: "house.fill")
+//                        .font(.title)
+//                        .foregroundColor(CustomColor.mauve)
+//                }
                 
                 
                 
@@ -89,5 +88,7 @@ struct HomePage: View  {
         }
     }
 }
+
+
 
 
