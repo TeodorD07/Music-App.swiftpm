@@ -15,6 +15,7 @@ struct ArtistsView: View {
                 print("Hello")
             }            
         }
+        .navigationViewStyle(.stack)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.pale)
         

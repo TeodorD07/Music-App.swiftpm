@@ -12,7 +12,7 @@ struct HomePage: View  {
         
         NavigationView{
             VStack {
-                Text("App Name")
+                Text("Shazamify")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                 
@@ -56,6 +56,7 @@ struct HomePage: View  {
                 
                 .padding(10)
             }
+            .navigationViewStyle(.stack)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(CustomColor.pale)
             
