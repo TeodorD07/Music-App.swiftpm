@@ -12,7 +12,7 @@ struct HomePage: View  {
         
         NavigationView{
             VStack {
-                Text("App Name")
+                Text("Shazamify")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                 
