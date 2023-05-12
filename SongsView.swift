@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import AVFoundation
+
 
 struct SongsView:  View {
     
     var body: some View {
         VStack{
-            Text("songs here")
+            NavigationLink("Let The Light In"){
+                SongPlay()
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(CustomColor.mauve)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.pale)
