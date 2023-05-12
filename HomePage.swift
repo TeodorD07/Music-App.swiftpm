@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AVFoundation
 
 
 struct HomePage: View  {
@@ -15,7 +14,7 @@ struct HomePage: View  {
         NavigationView{
             VStack {
                 Text("Shazamify")
-                    .foregroundColor(.white)
+                    .foregroundColor(CustomColor.mauve)
                     .font(.largeTitle)
                 
                     .padding(10)
