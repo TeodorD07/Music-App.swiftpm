@@ -2,59 +2,65 @@
 //  SongPlay.swift
 //  Music App
 //
-//  Created by Tanya Cervantes on 5/12/23.
+//  Created by Tanya Cervantes on 5/16/23.
 //
 
+
 import SwiftUI
-import AVKit
+import AVFoundation
+
+var player: AVAudioPlayer!
 
 struct SongPlay: View {
-    
-    @State var audioPlayer: AVAudioPlayer!
-    
     var body: some View {
-        ZStack {
-            VStack {
-                
-                Image("oceanblvd")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                
-                Text("Let The Light In")
-                    .font(.system(size: 30))
-                    .font(.largeTitle)
-                
-                HStack {
-                    Spacer()
-                    
-                    Button(action: {
-                        self.audioPlayer.play()
-                    }) {
-                        Image(systemName: "play.circle")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(CustomColor.mauve)
-                            .aspectRatio(contentMode: .fit)
-                    }
-                    Spacer()
-                    
-                    Button(action: {
-                        self.audioPlayer.pause()
-                    }) {
-                        Image(systemName: "pause.circle")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(CustomColor.mauve)
-                            .aspectRatio(contentMode: .fit)
-                    }
-                    Spacer()
-                }
+        VStack {
+            Button(action: {
+                playSound()
+            }) {
+                Image(systemName: "play.circle")
+                    .foregroundColor(Color.pink)
+                    .font(.system(size: 32))
+            }
+            
+            Button(action: {
+                pauseSound()
+            }) {
+                Image(systemName: "pause.circle")
+                    .foregroundColor(Color.purple)
+                    .font(.system(size: 32))
             }
         }
-        .onAppear {
-            let sound = Bundle.main.path(forResource: "let_the_light_in", ofType: "mp3")
-            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+    }
+        
+        func playSound() {
+            let url = Bundle.main.url(forResource: "let_the_light_in", withExtension: "mp3")
+          
+        //do nothing if url is empty
+            guard url != nil else {
+                return
+            }
+            
+            do{
+                player = try AVAudioPlayer(contentsOf: url!)
+                player?.play()
+            } catch {
+                print("error")
+            }
+            
+        }
+    
+    func pauseSound() {
+        let url = Bundle.main.url(forResource: "let_the_light_in", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
         }
         
+        do{
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.pause()
+        } catch {
+            print("error")
+        }
     }
-}
+    }
