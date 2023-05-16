@@ -34,7 +34,8 @@ struct ShazamifyView: View {
                         .cornerRadius(10)
                 } placeholder: {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.purple.opacity(0.5))
+                        .fill(CustomColor.pale.opacity(0.5))
+//                        .fill(Color.pink.opacity(0.5))
                         .frame(width:306, height: 300)
                         .cornerRadius(10)
                         .redacted(reason: .privacy)
@@ -44,19 +45,28 @@ struct ShazamifyView: View {
                         .font(.title)
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
+                        .foregroundColor(CustomColor.mauve)
                     Text(viewModel.shazamMedia.artistName ?? "Artist Name")
                         .font(.title2)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
+                        .foregroundColor(CustomColor.mauve)
+//                    Text(viewModel.shazamMedia.albumArtURL ?? "URL")
+//                        .font(.title2)
+//                        .fontWeight(.medium)
+//                        .multilineTextAlignment(.center)
+//                        .foregroundColor(CustomColor.mauve)
                 }.padding()
                 Spacer()
                 Button(action: {viewModel.startOrEndListening()}) {
                     Text(viewModel.isRecording ? "Listening..." : "Start Shazaming")
                         .frame(width: 300)
+                        .foregroundColor(CustomColor.mauve)
                 }.buttonStyle(.bordered)
                     .controlSize(.large)
 //                    .controlProminence(.increased)
                     .shadow(radius: 4)
+                
             }
         }
     }
