@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+
 struct HomePage: View  {
     var body: some View{
         
         NavigationView{
             VStack {
                 Text("Shazamify")
-                    .foregroundColor(.white)
+                    .foregroundColor(CustomColor.mauve)
                     .font(.largeTitle)
                 
                     .padding(10)
@@ -74,14 +75,13 @@ struct HomePage: View  {
                             .font(.title)
                             .foregroundColor(CustomColor.mauve)
                     }
-                    
                 }
                 
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Image(systemName: "house.fill")
-                            .font(.title)
-                            .foregroundColor(CustomColor.mauve)
-                }
+//                ToolbarItemGroup(placement: .navigationBarLeading) {
+//                    Image(systemName: "house.fill")
+//                        .font(.title)
+//                        .foregroundColor(CustomColor.mauve)
+//                }
                 
                 
                 
@@ -90,5 +90,7 @@ struct HomePage: View  {
         }
     }
 }
+
+
 
 

@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct ArtistsView: View {
-
+    
     @State var artists = ["Lana Del Rey", "Kali Uchis"]
     
     var body: some View {
         VStack {
             NavigationLink(artists[0]) {
                 LanaAlbumView()
-                }
+            }
             .foregroundColor(CustomColor.mauve)
             
             .onTapGesture {
@@ -18,6 +18,8 @@ struct ArtistsView: View {
         .navigationViewStyle(.stack)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.pale)
+        
+        
     }
 }
 
@@ -34,13 +36,15 @@ struct LanaAlbumView: View {
             .buttonStyle(.borderedProminent)
             .tint(CustomColor.mauve)
             NavigationLink(lanaAlbums[1]) {
-                           LustForLife()
-                       }
+                LustForLife()
+            }
             .buttonStyle(.borderedProminent)
             .tint(CustomColor.mauve)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.pale)
+        
+        
     }
 }
 
@@ -48,19 +52,21 @@ struct BornToDie: View {
     @State var bornToDie = ["Born to Die", "Off to the Races", "Blue Jeans", "Video Games", "Diet Mountain Dew", "National Anthem", "Dark Paradise", "Radio", "Carmen", "Million Dollar Man", "Summertime Sadness", "This Is What Makes Us Girls", "Without you", "Lolita", "Lucky Ones", "Ride", "American", "Cola", "Body Electric", "Blue Velvet", "Gods & Monsters", "Yayo", "Bel Air"]
     var body: some View {
         
-            VStack {
-                ForEach(0..<bornToDie.count, id: \.self) { songs in
-                    Button(bornToDie[songs]) {
-                        
-                    }
-                    .foregroundColor(CustomColor.mauve)
+        VStack {
+            ForEach(0..<bornToDie.count, id: \.self) { songs in
+                Button(bornToDie[songs]) {
+                    
                 }
+                .foregroundColor(CustomColor.mauve)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(CustomColor.pale)
         }
-
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(CustomColor.pale)
+        
+        
     }
+    
+}
 
 
 struct LustForLife: View {
@@ -76,5 +82,7 @@ struct LustForLife: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.pale)
+        
+        
     }
 }
