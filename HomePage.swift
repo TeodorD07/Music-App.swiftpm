@@ -50,7 +50,7 @@ struct HomePage: View  {
                 .padding(10)
                 
                 NavigationLink("Shazam"){
-                    
+                    ShazamifyView()
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(CustomColor.mauve)
