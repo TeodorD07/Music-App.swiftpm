@@ -51,11 +51,6 @@ struct ShazamifyView: View {
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
                         .foregroundColor(CustomColor.mauve)
-//                    Text(viewModel.shazamMedia.albumArtURL ?? "URL")
-//                        .font(.title2)
-//                        .fontWeight(.medium)
-//                        .multilineTextAlignment(.center)
-//                        .foregroundColor(CustomColor.mauve)
                 }.padding()
                 Spacer()
                 Button(action: {viewModel.startOrEndListening()}) {
