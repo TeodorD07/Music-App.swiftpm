@@ -14,8 +14,11 @@ struct HomePage: View  {
         NavigationView{
             VStack {
                 Text("Shazamify")
-                    .foregroundColor(CustomColor.mauve)
+                
+                    .foregroundColor(.white)
                     .font(.largeTitle)
+                    .background(Rectangle())
+                    .foregroundColor(CustomColor.mauve)
                 
                     .padding(10)
                 
@@ -62,20 +65,20 @@ struct HomePage: View  {
             .background(CustomColor.pale)
             
             
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    NavigationLink(destination: ArtistsView()) {
-                        Image(systemName: "star")
-                            .font(.title)
-                            .foregroundColor(CustomColor.mauve)
-                    }
-                    
-                    NavigationLink(destination: SongsView()) {
-                        Image(systemName: "music.note")
-                            .font(.title)
-                            .foregroundColor(CustomColor.mauve)
-                    }
-                }
+//            .toolbar {
+//                ToolbarItemGroup(placement: .bottomBar) {
+//                    NavigationLink(destination: ArtistsView()) {
+//                        Image(systemName: "star")
+//                            .font(.title)
+//                            .foregroundColor(CustomColor.mauve)
+//                    }
+//
+//                    NavigationLink(destination: SongsView()) {
+//                        Image(systemName: "music.note")
+//                            .font(.title)
+//                            .foregroundColor(CustomColor.mauve)
+//                    }
+//                }
                 
 //                ToolbarItemGroup(placement: .navigationBarLeading) {
 //                    NavigationLink(destination: HomePage()) {
@@ -87,7 +90,7 @@ struct HomePage: View  {
                 
                 
                 
-            }
+//            }
             
         }
     }
