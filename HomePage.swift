@@ -45,7 +45,7 @@ struct HomePage: View  {
                 .padding(10)
                 
                 NavigationLink("Search"){
-                
+                SearchView()
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(CustomColor.mauve)

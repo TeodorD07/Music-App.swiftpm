@@ -9,12 +9,15 @@ struct Item : Identifiable, Hashable {
     let ImageURL : URL?
 }
 struct SearchView: View {
+    @State var searchedName  = ""
     @State var songs = [Item]()
     var body: some View {
         
         NavigationView {
+           TextField("enter name of song", text: $searchedName)
             List(songs) { song in
                 HStack {
+                    
                     AsyncImage(url: song.ImageURL)
                         .frame(width: 75, height: 75, alignment: .center)
                     VStack {
@@ -34,9 +37,11 @@ struct SearchView: View {
 
     
     private let request: MusicCatalogSearchRequest = {
-        var request = MusicCatalogSearchRequest(term: "Happy",
+        var searchName = ""
+        var request = MusicCatalogSearchRequest(term: searchName,
                                                 types: [Song.self])
         request.limit = 5
+        var searchedName = searchName
         return request
     }()
        
