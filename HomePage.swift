@@ -18,30 +18,30 @@ struct HomePage: View  {
                 
                     .padding(10)
                 
-                NavigationLink("Artists"){
-                    ArtistsView()
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(CustomColor.mauve)
-                
-                NavigationLink("Songs"){
-                    SongsView()
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(CustomColor.mauve)
-                
-                .padding(10)
-                
+//                NavigationLink("Artists"){
+//                    ArtistsView()
+//                }
+//                .buttonStyle(.borderedProminent)
+//                .tint(CustomColor.mauve)
+//
+//                NavigationLink("Songs"){
+//                    SongsView()
+//                }
+//                .buttonStyle(.borderedProminent)
+//                .tint(CustomColor.mauve)
+//
+//                .padding(10)
+//
                 NavigationLink("Albums"){
-                    
+
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(CustomColor.mauve)
-                
+
                 .padding(10)
                 
                 NavigationLink("Search"){
-                    
+                
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(CustomColor.mauve)
@@ -78,9 +78,11 @@ struct HomePage: View  {
                 }
                 
                 ToolbarItemGroup(placement: .navigationBarLeading) {
+                    NavigationLink(destination: HomePage()) {
                         Image(systemName: "house.fill")
                             .font(.title)
                             .foregroundColor(CustomColor.mauve)
+                    }
                 }
                 
                 
