@@ -77,13 +77,13 @@ struct HomePage: View  {
                     }
                 }
                 
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    NavigationLink(destination: HomePage()) {
-                        Image(systemName: "house.fill")
-                            .font(.title)
-                            .foregroundColor(CustomColor.mauve)
-                    }
-                }
+//                ToolbarItemGroup(placement: .navigationBarLeading) {
+//                    NavigationLink(destination: HomePage()) {
+//                        Image(systemName: "house.fill")
+//                            .font(.title)
+//                            .foregroundColor(CustomColor.mauve)
+//                    }
+//                }
                 
                 
                 
