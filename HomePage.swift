@@ -36,16 +36,16 @@ struct HomePage: View  {
 //
 //                .padding(10)
 //
-                NavigationLink("Albums"){
-
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(CustomColor.mauve)
-
-                .padding(10)
+//                NavigationLink("Albums"){
+//
+//                }
+//                .buttonStyle(.borderedProminent)
+//                .tint(CustomColor.mauve)
+//
+//                .padding(10)
                 
                 NavigationLink("Search"){
-                SearchView()
+                    WKSearchView()
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(CustomColor.mauve)
