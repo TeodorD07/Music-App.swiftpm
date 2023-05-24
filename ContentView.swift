@@ -16,12 +16,12 @@ struct ContentView: View {
                             Label("Home", systemImage: "house")
                         }
                     
-                    ArtistsView()
+                    WKSearchView()
                         .tabItem {
                             Label("Artists", systemImage: "star")
                         }
                     
-                    SongsView()
+                    ShazamifyView()
                         .tabItem {
                             Label("Songs", systemImage: "heart")
                         }
