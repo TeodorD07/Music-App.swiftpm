@@ -35,7 +35,7 @@ struct ShazamifyView: View {
                 } placeholder: {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(CustomColor.pale.opacity(0.5))
-//                        .fill(Color.pink.opacity(0.5))
+                    //                        .fill(Color.pink.opacity(0.5))
                         .frame(width:306, height: 300)
                         .cornerRadius(10)
                         .redacted(reason: .privacy)
@@ -54,10 +54,16 @@ struct ShazamifyView: View {
                 }.padding()
                 Spacer()
                 Button(action: {viewModel.startOrEndListening()}) {
-                    Text(viewModel.isRecording ? "Listening..." : "Start Shazaming")
-                        .frame(width: 300)
-                        .foregroundColor(CustomColor.mauve)
-                }.buttonStyle(.bordered)
+                    ZStack {
+                            Circle()
+                                .frame(width: 100, height: 100)
+                                .foregroundColor(CustomColor.pale)
+//                                .offset(y: 25)
+                        Text(viewModel.isRecording ? "Listening..." : "S")
+                            .foregroundColor(CustomColor.mauve)
+                        }
+                }
+//                .buttonStyle(.bordered)
                     .controlSize(.large)
 //                    .controlProminence(.increased)
                     .shadow(radius: 4)
@@ -66,9 +72,9 @@ struct ShazamifyView: View {
         }
     }
 }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
+}

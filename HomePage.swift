@@ -52,6 +52,15 @@ struct HomePage: View  {
                 
                 .padding(10)
                 
+                NavigationLink("Albums"){
+                    ArtistsView()
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(CustomColor.mauve)
+                .disabled(true)
+                
+                .padding(10)
+                
                 NavigationLink("Shazam"){
                     ShazamifyView()
                 }
