@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct HomePage: View  {
+    @State var date = Date()
+    
     var body: some View{
         
         NavigationView{

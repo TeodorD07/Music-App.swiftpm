@@ -28,13 +28,13 @@ struct ContentView: View {
                         }
                         .buttonStyle(.borderedProminent)
                         .tint(CustomColor.mauve)
-                        .scaleEffect(tap ? 1 : 1.2)
-                                .animation(.spring(response: 0.4, dampingFraction: 0.6))
-                                .onTapGesture {
-                                    tap = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                        tap = false
-                                    }
+//                        .scaleEffect(tap ? 1 : 1.2)
+//                                .animation(.spring(response: 0.4, dampingFraction: 0.6))
+//                                .onTapGesture {
+//                                    tap = true
+//                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                                        tap = false
+//                                    }
                                 }
                         
                         .padding(10)
@@ -78,7 +78,6 @@ struct ContentView: View {
             
         }
         
-    }
 
 
 struct CustomColor {
