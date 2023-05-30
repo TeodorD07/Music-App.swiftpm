@@ -3,12 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var tabSelection = 0
     var body: some View {
-        
-
-            
             VStack {
-           
-                
+
                 TabView(selection: $tabSelection){
                     VStack {
                         Text("Shazamify")
@@ -39,6 +35,8 @@ struct ContentView: View {
                         
                         .padding(10)
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(CustomColor.pale)
                     
                    
                         .tabItem {
@@ -46,7 +44,10 @@ struct ContentView: View {
                         }
                         .tag(0)
                     
+                    
                     WKSearchView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(CustomColor.pale)
         
                         .tabItem {
                             Label("Artists", systemImage: "star")
@@ -54,6 +55,8 @@ struct ContentView: View {
                         .tag(1)
                     
                     ShazamifyView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(CustomColor.pale)
                         .tabItem {
                             Label("Songs", systemImage: "heart")
                         }
@@ -62,8 +65,7 @@ struct ContentView: View {
                 
                 
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(CustomColor.pale)
+            
             
             
             
