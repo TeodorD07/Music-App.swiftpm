@@ -2,17 +2,21 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var tabSelection = 0
+    @State var colorTheme = true
+    @State var backgroundTheme = Color.gray
+    @State var buttonColor = Color.black
     var body: some View {
             VStack {
 
                 TabView(selection: $tabSelection){
                     VStack {
+                        
                         Text("Shazamify")
                         
                             .foregroundColor(.white)
                             .font(.largeTitle)
                             .background(Rectangle())
-                            .foregroundColor(CustomColor.mauve)
+                            .tint(self.colorTheme ? CustomColor.mauve : buttonColor)
                             .padding(10)
                         
                        
@@ -20,23 +24,43 @@ struct ContentView: View {
                             tabSelection = 1
                         } label: {
                             Text("Search")
+                    
+
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(CustomColor.mauve)
-                        
+                        .tint(self.colorTheme ? CustomColor.mauve : buttonColor)
                         .padding(10)
                         Button {
                             tabSelection = 2
                         } label: {
                             Text("Shazam")
+                                
+
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(CustomColor.mauve)
-                        
+                        .tint(self.colorTheme ? CustomColor.mauve : buttonColor)
                         .padding(10)
+                        
+                        Button("Change Theme Color") {
+                            self.colorTheme = false
+                            
+                            
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(self.colorTheme ? CustomColor.mauve : buttonColor)
+                        .padding(10)
+                        
+                        if colorTheme == false {
+                            Button("Back To Default") {
+                                colorTheme = true
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .tint(self.colorTheme ? CustomColor.mauve : buttonColor)
+                            .padding(10)
+                        }
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(CustomColor.pale)
+                    .background(self.colorTheme ? CustomColor.pale : backgroundTheme)
                     
                    
                         .tabItem {
@@ -47,8 +71,7 @@ struct ContentView: View {
                     
                     WKSearchView()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(CustomColor.pale)
-        
+                        .background(self.colorTheme ? CustomColor.pale : backgroundTheme)
                         .tabItem {
                             Label("Artists", systemImage: "star")
                         }
@@ -56,7 +79,7 @@ struct ContentView: View {
                     
                     ShazamifyView()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(CustomColor.pale)
+                        .background(self.colorTheme ? CustomColor.pale : backgroundTheme)
                         .tabItem {
                             Label("Songs", systemImage: "heart")
                         }
