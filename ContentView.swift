@@ -6,7 +6,12 @@ struct ContentView: View {
     @State var backgroundTheme = Color.gray
     @State var buttonColor = Color.black
     var body: some View {
+
+
+
             VStack {
+
+
 
                 TabView(selection: $tabSelection){
                     VStack {
@@ -67,8 +72,8 @@ struct ContentView: View {
                             Label("Home", systemImage: "house")
                         }
                         .tag(0)
-                    
-                    
+
+
                     WKSearchView()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(self.colorTheme ? CustomColor.pale : backgroundTheme)
@@ -76,7 +81,7 @@ struct ContentView: View {
                             Label("Artists", systemImage: "star")
                         }
                         .tag(1)
-                    
+
                     ShazamifyView()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(self.colorTheme ? CustomColor.pale : backgroundTheme)
@@ -85,20 +90,18 @@ struct ContentView: View {
                         }
                         .tag(2)
                 }
-                
-                
+
+
             }
-            
-            
-            
-            
+
+
+
         }
         
     }
-
-
 struct CustomColor {
     static let pale = Color("pale")
     
     static let mauve = Color("mauve")
 }
+
